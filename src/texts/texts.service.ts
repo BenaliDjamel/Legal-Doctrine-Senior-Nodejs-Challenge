@@ -29,7 +29,6 @@ export class TextsService {
   }
 
   async findAll(query: { pageNumber: number; limit: number }): Promise<Text[]> {
-    // await this.textModel.deleteMany({});
     const { pageNumber = 1, limit = 5 } = query;
     let texts = await this.textModel.aggregate([
       { $skip: (pageNumber - 1) * limit },
@@ -103,16 +102,6 @@ export class TextsService {
     ]);
 
     return mostOccurrentWord(map);
-  }
-
-  async mostOccurentWordMongodbVersion() {
-    /*  let tmp = await this.textModel.aggregate([
-      { $project: { word: { $split: ['$content.en', ' '] } } },
-      { $unwind: '$word' },
-      { $group: { _id: '$word', total: { $sum: 1 } } },
-      { $sort: { total: -1 } },
-    ]);
-    return tmp.pop(); */
   }
 
   async sumbitTextForReview(id: string): Promise<Text> {

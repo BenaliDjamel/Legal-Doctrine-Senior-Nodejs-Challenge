@@ -70,7 +70,6 @@ export class TextsController {
   @HttpCode(HttpStatus.OK)
   async mostOccurentWord() {
     return this.textsService.mostOccurrentWordJsVersion();
-    //return this.textsService.mostOccurentWordMongodbVersion()
   }
 
   @Put(':id/submit')
