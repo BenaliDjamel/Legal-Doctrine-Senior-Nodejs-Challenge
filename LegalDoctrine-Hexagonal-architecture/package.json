@@ -1,0 +1,22 @@
+{
+  "name": "legaldoctrine-hexagonal-arch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "test:watch": "jest --watchAll --forceExit"
+  },
+  "keywords": [],
+  "author": "Djamel Benali",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "jest": "^28.0.3",
+    "ts-jest": "^28.0.1",
+    "ts-node": "^10.7.0"
+  }
+}

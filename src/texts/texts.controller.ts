@@ -69,7 +69,7 @@ export class TextsController {
   @Get('mostOccurent')
   @HttpCode(HttpStatus.OK)
   async mostOccurentWord() {
-    return this.textsService.mostOccurrentWordJsVersion();
+    return this.textsService.mostOccurrentWord();
   }
 
   @Put(':id/submit')

@@ -78,7 +78,7 @@ export class TextsService {
    * merge word occurrence for all languages, then compare the most occurrente word
    */
 
-  async mostOccurrentWordJsVersion() {
+  async mostOccurrentWord() {
     const texts = await this.textModel.find();
 
     if (!texts.length) {
